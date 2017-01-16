@@ -1,0 +1,44 @@
+{
+  "main": "build/index.js",
+  "scripts": {
+    "build": "[ -d build ] && rm -rf build; cp -r src build",
+    "cov": "npm run build && istanbul cover node_modules/mocha/bin/_mocha -- -u exports -R spec test/**.spec.js",
+    "test": "npm run build && mocha test/**.spec.js",
+    "prepublish": "npm run build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "should": "^11.1.2",
+    "singular": "^2.4.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "redis": "^2.6.3"
+  },
+  "name": "singular-redis",
+  "version": "0.1.0",
+  "description": "Redis module for singular application",
+  "bin": {
+    "singular-redis": "cli.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rumkin/singular-redis.git"
+  },
+  "keywords": [
+    "singular:module",
+    "singular",
+    "redis",
+    "redis-client"
+  ],
+  "author": "rumkin",
+  "bugs": {
+    "url": "https://github.com/rumkin/singular-redis/issues"
+  },
+  "homepage": "https://github.com/rumkin/singular-redis#readme"
+}
