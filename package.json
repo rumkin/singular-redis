@@ -18,11 +18,8 @@
     "redis": "^2.6.3"
   },
   "name": "singular-redis",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Redis module for singular application",
-  "bin": {
-    "singular-redis": "cli.js"
-  },
   "directories": {
     "test": "test"
   },
